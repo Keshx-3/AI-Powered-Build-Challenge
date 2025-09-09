@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // swcMinify: true, // Remove this line
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
@@ -11,13 +12,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 's2.coinmarketcap.com', // existing
+        hostname: 's2.coinmarketcap.com',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 's3.coinmarketcap.com', // add this
+        hostname: 's3.coinmarketcap.com',
         port: '',
         pathname: '/**',
       },
