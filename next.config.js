@@ -2,18 +2,30 @@
 const nextConfig = {
   reactStrictMode: true,
   typescript: {
-    ignoreBuildErrors: true, // optional, but matches old config
+    ignoreBuildErrors: true,
   },
   eslint: {
-    ignoreDuringBuilds: true, // optional, but matches old config
+    ignoreDuringBuilds: true,
   },
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "s2.coinmarketcap.com",
-        port: "",
-        pathname: "/**", // allows all coin images
+        protocol: 'https',
+        hostname: 'placehold.co',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 's2.coinmarketcap.com',
+        port: '',
+        pathname: '/**',
       },
     ],
   },
