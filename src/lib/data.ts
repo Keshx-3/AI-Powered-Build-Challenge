@@ -92,7 +92,7 @@ export async function fetchCryptoData(): Promise<CryptoCurrency[]> {
         return [];
     }
 
-    let cryptoData: CryptoCurrency[] = latestJson.data.map(mapCoinData).filter((c): c is CryptoCurrency => c !== null);
+    let cryptoData: CryptoCurrency[] = latestJson.data.map(mapCoinData).filter((c: CryptoCurrency | null): c is CryptoCurrency => c !== null);
 
     if (vanryJson && vanryJson.data && vanryJson.data.VANRY) {
         const vanryCoinData = Array.isArray(vanryJson.data.VANRY) ? vanryJson.data.VANRY[0] : vanryJson.data.VANRY;
